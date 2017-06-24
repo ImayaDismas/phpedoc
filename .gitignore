@@ -1,2 +1,2 @@
 # exclude everything except directory foo/bar
-/Slim
+*/Slim
