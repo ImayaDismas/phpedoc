@@ -2,106 +2,104 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="498111a5-b88b-4d69-9c23-a5c8c42242c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chores/Source Files/include/Config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chores/Source Files/include/DbConnect.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chores/Source Files/include/DbHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chores/Source Files/include/PassHash.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chores/Source Files/v1/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chores/Source Files/v1/index.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/App.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/CallableResolver.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/CallableResolverAwareTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Collection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Container.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/DefaultServicesProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/DeferredCallable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Exception/ContainerException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Exception/ContainerValueNotFoundException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Exception/InvalidMethodException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Exception/MethodNotAllowedException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Exception/NotFoundException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Exception/SlimException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Handlers/AbstractError.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Handlers/AbstractHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Handlers/Error.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Handlers/NotAllowed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Handlers/NotFound.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Handlers/PhpError.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Handlers/Strategies/RequestResponse.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Handlers/Strategies/RequestResponseArgs.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/Body.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/Cookies.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/Environment.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/Headers.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/Message.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/Request.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/RequestBody.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/Response.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/Stream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/UploadedFile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Http/Uri.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Interfaces/CallableResolverInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Interfaces/CollectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Interfaces/Http/CookiesInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Interfaces/Http/EnvironmentInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Interfaces/Http/HeadersInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Interfaces/InvocationStrategyInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Interfaces/RouteGroupInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Interfaces/RouteInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Interfaces/RouterInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/MiddlewareAwareTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Routable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Route.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/RouteGroup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/Slim/Router.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/example/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/example/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/example/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/phpcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/AppTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/CallableResolverTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/CollectionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/ContainerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/DeferredCallableTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Handlers/AbstractHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Handlers/ErrorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Handlers/NotAllowedTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Handlers/NotFoundTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Handlers/PhpErrorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/BodyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/CookiesTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/EnvironmentTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/HeadersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/MessageTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/RequestBodyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/RequestTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/ResponseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/StreamTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/UploadedFilesTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Http/UriTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/MiddlewareAwareTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Mocks/CallableTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Mocks/InvocationStrategyTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Mocks/InvokableTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Mocks/MessageStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Mocks/MiddlewareStub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Mocks/MockAction.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Mocks/SmallChunksStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Mocks/Stackable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/Mocks/StaticCallable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/RouteTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/RouterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Slim/tests/getallheaders.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/chores.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/zika.mwb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/include/Config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/include/DbConnect.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/include/DbHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/include/PassHash.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/App.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/CallableResolver.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/CallableResolverAwareTrait.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Collection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Container.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/DefaultServicesProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/DeferredCallable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Exception/ContainerException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Exception/ContainerValueNotFoundException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Exception/InvalidMethodException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Exception/MethodNotAllowedException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Exception/NotFoundException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Exception/SlimException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Handlers/AbstractError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Handlers/AbstractHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Handlers/Error.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Handlers/NotAllowed.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Handlers/NotFound.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Handlers/PhpError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Handlers/Strategies/RequestResponse.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Handlers/Strategies/RequestResponseArgs.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/Body.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/Cookies.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/Environment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/Headers.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/Message.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/Request.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/RequestBody.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/Response.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/Stream.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/UploadedFile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Http/Uri.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Interfaces/CallableResolverInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Interfaces/CollectionInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Interfaces/Http/CookiesInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Interfaces/Http/EnvironmentInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Interfaces/Http/HeadersInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Interfaces/InvocationStrategyInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Interfaces/RouteGroupInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Interfaces/RouteInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Interfaces/RouterInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/MiddlewareAwareTrait.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Routable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Route.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/RouteGroup.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/Slim/Router.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/example/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/example/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/example/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/phpcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/AppTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/CallableResolverTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/CollectionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/ContainerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/DeferredCallableTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Handlers/AbstractHandlerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Handlers/ErrorTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Handlers/NotAllowedTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Handlers/NotFoundTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Handlers/PhpErrorTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/BodyTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/CookiesTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/EnvironmentTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/HeadersTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/MessageTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/RequestBodyTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/RequestTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/ResponseTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/StreamTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/UploadedFilesTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Http/UriTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/MiddlewareAwareTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Mocks/CallableTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Mocks/InvocationStrategyTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Mocks/InvokableTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Mocks/MessageStub.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Mocks/MiddlewareStub.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Mocks/MockAction.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Mocks/SmallChunksStream.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Mocks/Stackable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/Mocks/StaticCallable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/RouteTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/RouterTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/libs/Slim/tests/getallheaders.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/v1/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chores/Source Files/v1/index.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -121,19 +119,39 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chores/Source Files/include/Config.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chores/v1/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="-2196">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chores/include/Config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PassHash.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chores/include/PassHash.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="DbConnect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chores/Source Files/include/DbConnect.php">
+        <entry file="file://$PROJECT_DIR$/chores/include/DbConnect.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -143,41 +161,24 @@
         </entry>
       </file>
       <file leaf-file-name="DbHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chores/Source Files/include/DbHandler.php">
+        <entry file="file://$PROJECT_DIR$/chores/include/DbHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PassHash.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chores/Source Files/include/PassHash.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chores/Source Files/v1/.htaccess">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chores/Source Files/v1/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="-2614">
+              <caret line="126" column="85" lean-forward="false" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="85" />
+              <folding>
+                <marker date="1498491407183" expanded="true" signature="1140:1224" ph="INSERT INTO users... " />
+                <marker date="1498491407183" expanded="true" signature="2151:2198" ph="SELECT passw... users" />
+                <marker date="1498491407183" expanded="true" signature="3135:3171" ph="SELECT id fr... users" />
+                <marker date="1498491407183" expanded="true" signature="3541:3615" ph="SELECT name,... users" />
+                <marker date="1498491407183" expanded="true" signature="4053:4091" ph="SELECT api_k... users" />
+                <marker date="1498491407183" expanded="true" signature="4518:4556" ph="SELECT id FR... users" />
+                <marker date="1498491407183" expanded="true" signature="5062:5100" ph="SELECT id fr... users" />
+                <marker date="1498491407183" expanded="true" signature="5759:5792" ph="INSERT INTO tasks... " />
+                <marker date="1498491407183" expanded="true" signature="6595:6722" ph="SELECT t.id,... tasks" />
+                <marker date="1498491407183" expanded="true" signature="7158:7239" ph="SELECT t.* F... tasks" />
+                <marker date="1498491407183" expanded="true" signature="7670:7784" ph="UPDATE tasks... " />
+                <marker date="1498491407183" expanded="true" signature="8799:8852" ph="INSERT INTO user_tasks... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -191,6 +192,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/chores/Source Files/v1/.htaccess" />
+        <option value="$PROJECT_DIR$/chores/Source Files/include/DbConnect.php" />
+        <option value="$PROJECT_DIR$/chores/Source Files/include/Config.php" />
+        <option value="$PROJECT_DIR$/chores/Source Files/include/PassHash.php" />
+        <option value="$PROJECT_DIR$/chores/Source Files/v1/index.php" />
+        <option value="$PROJECT_DIR$/chores/Source Files/include/DbHandler.php" />
+        <option value="$PROJECT_DIR$/chores/include/DbHandler.php" />
+        <option value="$PROJECT_DIR$/chores/v1/index.php" />
+        <option value="$PROJECT_DIR$/chores/include/Config.php" />
       </list>
     </option>
   </component>
@@ -202,10 +211,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="432" />
-    <option name="y" value="106" />
-    <option name="width" value="1346" />
-    <option name="height" value="701" />
+    <option name="y" value="27" />
+    <option name="width" value="1366" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -222,6 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -249,10 +258,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Source Files" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="v1" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -270,10 +275,6 @@
               <option name="myItemId" value="chores" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Source Files" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -288,10 +289,13 @@
               <option name="myItemId" value="chores" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,6 +354,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -383,33 +393,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1498485499460</updated>
-      <workItem from="1498485501476" duration="1212000" />
+      <workItem from="1498485501476" duration="6593000" />
+      <workItem from="1498492745158" duration="614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1212000" />
+    <option name="totallyTimeSpent" value="7207000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="432" y="106" width="1346" height="701" extended-state="0" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962853" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -424,23 +435,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chores/chores.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chores/Source Files/include/Config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chores/Source Files/include/DbConnect.php">
+    <entry file="file://$PROJECT_DIR$/chores/v1/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -448,7 +443,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chores/Source Files/include/DbHandler.php">
+    <entry file="file://$PROJECT_DIR$/chores/include/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chores/include/PassHash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chores/include/DbConnect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -456,26 +467,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chores/Source Files/include/PassHash.php">
+    <entry file="file://$PROJECT_DIR$/chores/include/DbHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="2268">
+          <caret line="126" column="85" lean-forward="false" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="85" />
+          <folding>
+            <marker date="1498491407183" expanded="true" signature="1140:1224" ph="INSERT INTO users... " />
+            <marker date="1498491407183" expanded="true" signature="2151:2198" ph="SELECT passw... users" />
+            <marker date="1498491407183" expanded="true" signature="3135:3171" ph="SELECT id fr... users" />
+            <marker date="1498491407183" expanded="true" signature="3541:3615" ph="SELECT name,... users" />
+            <marker date="1498491407183" expanded="true" signature="4053:4091" ph="SELECT api_k... users" />
+            <marker date="1498491407183" expanded="true" signature="4518:4556" ph="SELECT id FR... users" />
+            <marker date="1498491407183" expanded="true" signature="5062:5100" ph="SELECT id fr... users" />
+            <marker date="1498491407183" expanded="true" signature="5759:5792" ph="INSERT INTO tasks... " />
+            <marker date="1498491407183" expanded="true" signature="6595:6722" ph="SELECT t.id,... tasks" />
+            <marker date="1498491407183" expanded="true" signature="7158:7239" ph="SELECT t.* F... tasks" />
+            <marker date="1498491407183" expanded="true" signature="7670:7784" ph="UPDATE tasks... " />
+            <marker date="1498491407183" expanded="true" signature="8799:8852" ph="INSERT INTO user_tasks... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chores/chores.sql" />
+    <entry file="file://$PROJECT_DIR$/chores/Source Files/v1/.htaccess" />
+    <entry file="file://$PROJECT_DIR$/chores/Source Files/include/Config.php" />
+    <entry file="file://$PROJECT_DIR$/chores/Source Files/include/DbConnect.php" />
+    <entry file="file://$PROJECT_DIR$/chores/Source Files/v1/index.php" />
+    <entry file="file://$PROJECT_DIR$/chores/Source Files/include/PassHash.php" />
+    <entry file="file://$PROJECT_DIR$/chores/Source Files/include/DbHandler.php" />
+    <entry file="file://$PROJECT_DIR$/chores/include/DbConnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chores/Source Files/v1/index.php">
+    <entry file="file://$PROJECT_DIR$/chores/v1/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="-2196">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chores/Source Files/v1/.htaccess">
+    <entry file="file://$PROJECT_DIR$/chores/include/DbHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        <state relative-caret-position="-2614">
+          <caret line="126" column="85" lean-forward="false" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="85" />
+          <folding>
+            <marker date="1498491407183" expanded="true" signature="1140:1224" ph="INSERT INTO users... " />
+            <marker date="1498491407183" expanded="true" signature="2151:2198" ph="SELECT passw... users" />
+            <marker date="1498491407183" expanded="true" signature="3135:3171" ph="SELECT id fr... users" />
+            <marker date="1498491407183" expanded="true" signature="3541:3615" ph="SELECT name,... users" />
+            <marker date="1498491407183" expanded="true" signature="4053:4091" ph="SELECT api_k... users" />
+            <marker date="1498491407183" expanded="true" signature="4518:4556" ph="SELECT id FR... users" />
+            <marker date="1498491407183" expanded="true" signature="5062:5100" ph="SELECT id fr... users" />
+            <marker date="1498491407183" expanded="true" signature="5759:5792" ph="INSERT INTO tasks... " />
+            <marker date="1498491407183" expanded="true" signature="6595:6722" ph="SELECT t.id,... tasks" />
+            <marker date="1498491407183" expanded="true" signature="7158:7239" ph="SELECT t.* F... tasks" />
+            <marker date="1498491407183" expanded="true" signature="7670:7784" ph="UPDATE tasks... " />
+            <marker date="1498491407183" expanded="true" signature="8799:8852" ph="INSERT INTO user_tasks... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chores/include/PassHash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chores/include/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding />
         </state>
       </provider>
