@@ -40,9 +40,9 @@ function authenticate(\Slim\Route $route) {
             echoRespnse(401, $response);
             $app->stop();
         } else {
-            global $user_id;
+            global $proff_id;
             // get user primary key id
-            $user_id = $db->getUserId($api_key);
+            $proff_id = $db->getUserId($api_key);
         }
     } else {
         // api key is missing in header
@@ -57,19 +57,20 @@ function authenticate(\Slim\Route $route) {
  * ----------- METHODS WITHOUT AUTHENTICATION ---------------------------------
  */
 /**
- * User Registration
+ * proffesional Registration
  * url - /register
  * method - POST
  * params - name, email, password
  */
 $app->post('/register', function() use ($app) {
     // check for required params
-    verifyRequiredParams(array('name', 'email', 'password'));
+    verifyRequiredParams(array('first_name', 'last_name', 'email', 'password'));
 
     $response = array();
 
     // reading post params
-    $name = $app->request->post('name');
+    $first_name = $app->request->post('first_name');
+    $last_name = $app->request->post('last_name');
     $email = $app->request->post('email');
     $password = $app->request->post('password');
 
@@ -77,14 +78,14 @@ $app->post('/register', function() use ($app) {
     validateEmail($email);
 
     $db = new DbHandler();
-    $res = $db->createUser($name, $email, $password);
+    $res = $db->createUser($first_name, $last_name, $email, $password);
 
     if ($res == USER_CREATED_SUCCESSFULLY) {
         $response["error"] = false;
         $response["message"] = "You are successfully registered";
     } else if ($res == USER_CREATE_FAILED) {
         $response["error"] = true;
-        $response["message"] = "Oops! An error occurred while registereing";
+        $response["message"] = "Oops! An error occurred while registering";
     } else if ($res == USER_ALREADY_EXISTED) {
         $response["error"] = true;
         $response["message"] = "Sorry, this email already existed";
@@ -94,7 +95,7 @@ $app->post('/register', function() use ($app) {
 });
 
 /**
- * User Login
+ * proffesional Login
  * url - /login
  * method - POST
  * params - email, password
@@ -112,20 +113,31 @@ $app->post('/login', function() use ($app) {
     // check for correct email and password
     if ($db->checkLogin($email, $password)) {
         // get the user by email
-        $user = $db->getUserByEmail($email);
+        $proffesional = $db->getUserByEmail($email);
+        if ($proffesional != NULL) {
 
-        if ($user != NULL) {
             $response["error"] = false;
-            $response['name'] = $user['name'];
-            $response['email'] = $user['email'];
-            $response['apiKey'] = $user['api_key'];
-            $response['createdAt'] = $user['created_at'];
+            $response['proff_id'] = $proffesional['proff_id'];
+            $response['proff_name'] = $proffesional['proff_name'];
+            $response['email'] = $proffesional['email'];
+            $response['cell_no'] = $proffesional['cell_no'];
+            $response['national_id'] = $proffesional['national_id'];
+            $response['location'] = $proffesional['location'];
+            $response['availability_status'] = $proffesional['availability_status'];
+            $response['image'] = $proffesional['image'];
+            $response['first_name'] = $proffesional['first_name'];
+            $response['last_name'] = $proffesional['last_name'];
+            $response['api_key'] = $proffesional['api_key'];
+            $response['gender'] = $proffesional['gender'];
+            $response['status'] = $proffesional['status'];
+            $response['created_at'] = $proffesional['created_at'];
         } else {
             // unknown error occurred
             $response['error'] = true;
             $response['message'] = "An error occurred. Please try again";
         }
-    } else {
+    }
+    else {
         // user credentials are wrong
         $response['error'] = true;
         $response['message'] = 'Login failed. Incorrect credentials';
@@ -134,59 +146,79 @@ $app->post('/login', function() use ($app) {
     echoRespnse(200, $response);
 });
 
-/*
+/**
  * ------------------------ METHODS WITH AUTHENTICATION ------------------------
  */
 
 /**
- * Listing all tasks of particual user
+ * Listing all tasks of particual proffesional
  * method GET
- * url /tasks
+ * url /proffesionals
  */
-$app->get('/tasks', 'authenticate', function() {
-    global $user_id;
+$app->get('/proffesionals', 'authenticate', function() {
+
     $response = array();
     $db = new DbHandler();
 
-    // fetching all user tasks
-    $result = $db->getAllUserTasks($user_id);
+    // fetching all proffesionals
+    $result = $db->getAllproffesionals();
 
     $response["error"] = false;
-    $response["tasks"] = array();
+    $response["proffesionals"] = array();
 
     // looping through result and preparing tasks array
-    while ($task = $result->fetch_assoc()) {
+    while ($proffesional = $result->fetch_assoc()) {
         $tmp = array();
-        $tmp["id"] = $task["id"];
-        $tmp["task"] = $task["task"];
-        $tmp["status"] = $task["status"];
-        $tmp["createdAt"] = $task["created_at"];
-        array_push($response["tasks"], $tmp);
+        $tmp['proff_id'] = $proffesional['proff_id'];
+        $tmp['proff_name'] = $proffesional['proff_name'];
+        $tmp['email'] = $proffesional['email'];
+        $tmp['cell_no'] = $proffesional['cell_no'];
+        $tmp['national_id'] = $proffesional['national_id'];
+        $tmp['location'] = $proffesional['location'];
+        $tmp['availability_status'] = $proffesional['availability_status'];
+        $tmp['image'] = $proffesional['image'];
+        $tmp['first_name'] = $proffesional['first_name'];
+        $tmp['last_name'] = $proffesional['last_name'];
+        $tmp['api_key'] = $proffesional['api_key'];
+        $tmp['gender'] = $proffesional['gender'];
+        $tmp['status'] = $proffesional['status'];
+        $tmp['created_at'] = $proffesional['created_at'];
+        array_push($response["proffesionals"], $tmp);
     }
 
     echoRespnse(200, $response);
 });
 
 /**
- * Listing single task of particual user
+ * Listing single proffesional
  * method GET
- * url /tasks/:id
- * Will return 404 if the task doesn't belongs to user
+ * url /proffesional/:id
+ * Will return 404 if the proffesional doesn't exist
  */
-$app->get('/tasks/:id', 'authenticate', function($task_id) {
-    global $user_id;
+$app->get('/proffesional/:id', 'authenticate', function($proff_id) {
+//    global $proff_id;
     $response = array();
     $db = new DbHandler();
 
     // fetch task
-    $result = $db->getTask($task_id, $user_id);
+    $result = $db->getProffesional($proff_id);
 
     if ($result != NULL) {
         $response["error"] = false;
-        $response["id"] = $result["id"];
-        $response["task"] = $result["task"];
-        $response["status"] = $result["status"];
-        $response["createdAt"] = $result["created_at"];
+        $response['proff_id'] = $result['proff_id'];
+        $response['proff_name'] = $result['proff_name'];
+        $response['email'] = $result['email'];
+        $response['cell_no'] = $result['cell_no'];
+        $response['national_id'] = $result['national_id'];
+        $response['location'] = $result['location'];
+        $response['availability_status'] = $result['availability_status'];
+        $response['image'] = $result['image'];
+        $response['first_name'] = $result['first_name'];
+        $response['last_name'] = $result['last_name'];
+        $response['api_key'] = $result['api_key'];
+        $response['gender'] = $result['gender'];
+        $response['status'] = $result['status'];
+        $response['created_at'] = $result['created_at'];
         echoRespnse(200, $response);
     } else {
         $response["error"] = true;
@@ -208,11 +240,11 @@ $app->post('/tasks', 'authenticate', function() use ($app) {
     $response = array();
     $task = $app->request->post('task');
 
-    global $user_id;
+    global $proff_id;
     $db = new DbHandler();
 
     // creating new task
-    $task_id = $db->createTask($user_id, $task);
+    $task_id = $db->createTask($proff_id, $task);
 
     if ($task_id != NULL) {
         $response["error"] = false;
@@ -232,19 +264,25 @@ $app->post('/tasks', 'authenticate', function() use ($app) {
  * params task, status
  * url - /tasks/:id
  */
-$app->put('/tasks/:id', 'authenticate', function($task_id) use($app) {
+$app->put('/proffesionals/:id', 'authenticate', function($proff_id) use($app) {
     // check for required params
-    verifyRequiredParams(array('task', 'status'));
+    verifyRequiredParams(array('proff_name', 'email', 'cell_no', 'national_id', 'location', 'image', 'first_name', 'last_name'));
 
-    global $user_id;
-    $task = $app->request->put('task');
-    $status = $app->request->put('status');
+    global $proff_id;
+    $proff_name = $app->request->put('proff_name');
+    $email = $app->request->put('email');
+    $cell_no = $app->request->put('cell_no');
+    $national_id = $app->request->put('national_id');
+    $location = $app->request->put('location');
+    $image = $app->request->put('image');
+    $first_name = $app->request->put('first_name');
+    $last_name = $app->request->put('last_name');
 
     $db = new DbHandler();
     $response = array();
 
     // updating task
-    $result = $db->updateTask($user_id, $task_id, $task, $status);
+    $result = $db->updateProffesional($proff_id, $proff_name, $email, $cell_no, $national_id, $location, $image, $first_name, $last_name);
     if ($result) {
         // task updated successfully
         $response["error"] = false;
@@ -258,16 +296,16 @@ $app->put('/tasks/:id', 'authenticate', function($task_id) use($app) {
 });
 
 /**
- * Deleting task. Users can delete only their tasks
+ * Deleting proffesional. proffesional can delete only their profile
  * method DELETE
- * url /tasks
+ * url /proffesionals
  */
-$app->delete('/tasks/:id', 'authenticate', function($task_id) use($app) {
-    global $user_id;
+$app->delete('/proffesionals/:id', 'authenticate', function($proff_id) use($app) {
+    global $proff_id;
 
     $db = new DbHandler();
     $response = array();
-    $result = $db->deleteTask($user_id, $task_id);
+    $result = $db->deleteproffesional($proff_id);
     if ($result) {
         // task deleted successfully
         $response["error"] = false;

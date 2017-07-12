@@ -19,29 +19,30 @@ class DbHandler {
         $this->conn = $db->connect();
     }
 
-    /* ------------- `users` table method ------------------ */
+    /* ------------- `proffesionals` table method ------------------ */
 
     /**
-     * Creating new user
-     * @param String $name User full name
-     * @param String $email User login email id
-     * @param String $password User login password
+     * Creating new proffesional
+     * @param String $first_name proffesional first name
+     * @param String $las_name proffesional last name
+     * @param String $email proffesional login email id
+     * @param String $password proffesional login password
      */
-    public function createUser($name, $email, $password) {
+    public function createUser($first_name, $last_name, $email, $password) {
         require_once 'PassHash.php';
         $response = array();
 
         // First check if user already existed in db
         if (!$this->isUserExists($email)) {
             // Generating password hash
-            $password_hash = PassHash::hash($password);
+            $passwd = PassHash::hash($password);
 
             // Generating API key
             $api_key = $this->generateApiKey();
 
             // insert query
-            $stmt = $this->conn->prepare("INSERT INTO users(name, email, password_hash, api_key, status) values(?, ?, ?, ?, 1)");
-            $stmt->bind_param("ssss", $name, $email, $password_hash, $api_key);
+            $stmt = $this->conn->prepare("INSERT INTO proffesionals(first_name, last_name, email, passwd, api_key, status) values(?, ?, ?, ?, ?, 1)");
+            $stmt->bind_param("sssss", $first_name, $last_name, $email, $passwd, $api_key);
 
             $result = $stmt->execute();
 
@@ -64,20 +65,20 @@ class DbHandler {
     }
 
     /**
-     * Checking user login
-     * @param String $email User login email id
-     * @param String $password User login password
-     * @return boolean User login status success/fail
+     * Checking proffesional login
+     * @param String $email proffesional login email id
+     * @param String $password proffesional login password
+     * @return boolean proffesional login status success/fail
      */
     public function checkLogin($email, $password) {
         // fetching user by email
-        $stmt = $this->conn->prepare("SELECT password_hash FROM users WHERE email = ?");
+        $stmt = $this->conn->prepare("SELECT passwd FROM proffesionals WHERE email = ?");
 
         $stmt->bind_param("s", $email);
 
         $stmt->execute();
 
-        $stmt->bind_result($password_hash);
+        $stmt->bind_result($passwd);
 
         $stmt->store_result();
 
@@ -89,7 +90,7 @@ class DbHandler {
 
             $stmt->close();
 
-            if (PassHash::check_password($password_hash, $password)) {
+            if (PassHash::check_password($passwd, $password)) {
                 // User password is correct
                 return TRUE;
             } else {
@@ -105,12 +106,12 @@ class DbHandler {
     }
 
     /**
-     * Checking for duplicate user by email address
+     * Checking for duplicate proffesional by email address
      * @param String $email email to check in db
      * @return boolean
      */
     private function isUserExists($email) {
-        $stmt = $this->conn->prepare("SELECT id from users WHERE email = ?");
+        $stmt = $this->conn->prepare("SELECT proff_id from proffesionals WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $stmt->store_result();
@@ -120,28 +121,28 @@ class DbHandler {
     }
 
     /**
-     * Fetching user by email
-     * @param String $email User email id
+     * Fetching proffesional by email
+     * @param String $email proffesional email id
      */
     public function getUserByEmail($email) {
-        $stmt = $this->conn->prepare("SELECT name, email, api_key, status, created_at FROM users WHERE email = ?");
+        $stmt = $this->conn->prepare("SELECT proff_id, proff_name, api_key, email, cell_no, national_id, location, availability_status, image, first_name, last_name, gender, status, created_at FROM proffesionals WHERE email = ?");
         $stmt->bind_param("s", $email);
         if ($stmt->execute()) {
-            $user = $stmt->get_result()->fetch_assoc();
+            $proffesional = $stmt->get_result()->fetch_assoc();
             $stmt->close();
-            return $user;
+            return $proffesional;
         } else {
             return NULL;
         }
     }
 
     /**
-     * Fetching user api key
-     * @param String $user_id user id primary key in user table
+     * Fetching proffesional api key
+     * @param String $proff_id proffesional id primary key in proffesionals table
      */
-    public function getApiKeyById($user_id) {
-        $stmt = $this->conn->prepare("SELECT api_key FROM users WHERE id = ?");
-        $stmt->bind_param("i", $user_id);
+    public function getApiKeyById($proff_id) {
+        $stmt = $this->conn->prepare("SELECT api_key FROM proffesionals WHERE proff_id = ?");
+        $stmt->bind_param("i", $proff_id);
         if ($stmt->execute()) {
             $api_key = $stmt->get_result()->fetch_assoc();
             $stmt->close();
@@ -152,29 +153,29 @@ class DbHandler {
     }
 
     /**
-     * Fetching user id by api key
-     * @param String $api_key user api key
+     * Fetching proffesional id by api key
+     * @param String $api_key proffesional api key
      */
     public function getUserId($api_key) {
-        $stmt = $this->conn->prepare("SELECT id FROM users WHERE api_key = ?");
+        $stmt = $this->conn->prepare("SELECT proff_id FROM proffesionals WHERE api_key = ?");
         $stmt->bind_param("s", $api_key);
         if ($stmt->execute()) {
-            $user_id = $stmt->get_result()->fetch_assoc();
+            $proff_id = $stmt->get_result()->fetch_assoc();
             $stmt->close();
-            return $user_id;
+            return $proff_id;
         } else {
             return NULL;
         }
     }
 
     /**
-     * Validating user api key
+     * Validating proffesional api key
      * If the api key is there in db, it is a valid key
-     * @param String $api_key user api key
+     * @param String $api_key proffesional api key
      * @return boolean
      */
     public function isValidApiKey($api_key) {
-        $stmt = $this->conn->prepare("SELECT id from users WHERE api_key = ?");
+        $stmt = $this->conn->prepare("SELECT proff_id from proffesionals WHERE api_key = ?");
         $stmt->bind_param("s", $api_key);
         $stmt->execute();
         $stmt->store_result();
@@ -190,7 +191,7 @@ class DbHandler {
         return md5(uniqid(rand(), true));
     }
 
-    /* ------------- `tasks` table method ------------------ */
+    /* ------------- `proffesionals` table method ------------------ */
 
     /**
      * Creating new task
@@ -238,27 +239,47 @@ class DbHandler {
     }
 
     /**
-     * Fetching all user tasks
-     * @param String $user_id id of the user
+     * Fetching proffessional details
+     * @param String $proff_id of the proffesional
      */
-    public function getAllUserTasks($user_id) {
-        $stmt = $this->conn->prepare("SELECT t.* FROM tasks t, user_tasks ut WHERE t.id = ut.task_id AND ut.user_id = ?");
-        $stmt->bind_param("i", $user_id);
+    public function getProffesional($proff_id) {
+        $stmt = $this->conn->prepare("SELECT * FROM proffesionals WHERE proff_id = ?");
+        $stmt->bind_param("i", $proff_id);
+        if ($stmt->execute()) {
+            $proffesional = $stmt->get_result()->fetch_assoc();
+            $stmt->close();
+            return $proffesional;
+        } else {
+            return NULL;
+        }
+    }
+    /**
+     * Fetching all proffesionals
+     * @param String $proff_id of the proffesional
+     */
+    public function getAllproffesionals() {
+        $stmt = $this->conn->prepare("SELECT * FROM proffesionals");
         $stmt->execute();
-        $tasks = $stmt->get_result();
+        $proffesionals = $stmt->get_result();
         $stmt->close();
-        return $tasks;
+        return $proffesionals;
     }
 
     /**
-     * Updating task
-     * @param String $task_id id of the task
-     * @param String $task task text
-     * @param String $status task status
+     * Updating proffesional
+     * @param String $proff_id id of the proffesional
+     * @param String proff_name text
+     * @param String $email text
+     * @param String $cell_no text
+     * @param String $national_id text
+     * @param String $location text
+     * @param String $image text
+     * @param String $first_name text
+     * @param String $last_name text
      */
-    public function updateTask($user_id, $task_id, $task, $status) {
-        $stmt = $this->conn->prepare("UPDATE tasks t, user_tasks ut set t.task = ?, t.status = ? WHERE t.id = ? AND t.id = ut.task_id AND ut.user_id = ?");
-        $stmt->bind_param("siii", $task, $status, $task_id, $user_id);
+    public function updateProffesional($proff_id, $proff_name, $email, $cell_no, $national_id, $location, $image, $first_name, $last_name) {
+        $stmt = $this->conn->prepare("UPDATE proffesionals set proff_name = ?, email = ?, cell_no = ?, national_id = ?, location = ?, image = ?, first_name = ?, last_name = ? WHERE proff_id = ?");
+        $stmt->bind_param("siii", $proff_name, $email, $cell_no, $national_id, $location, $image, $first_name, $last_name, $proff_id);
         $stmt->execute();
         $num_affected_rows = $stmt->affected_rows;
         $stmt->close();
@@ -266,10 +287,10 @@ class DbHandler {
     }
 
     /**
-     * Deleting a task
-     * @param String $task_id id of the task to delete
+     * Deleting a proffesional
+     * @param String $proff_id id of the proffesional to delete
      */
-    public function deleteTask($user_id, $task_id) {
+    public function deleteProffesional($user_id, $task_id) {
         $stmt = $this->conn->prepare("DELETE t FROM tasks t, user_tasks ut WHERE t.id = ? AND ut.task_id = t.id AND ut.user_id = ?");
         $stmt->bind_param("ii", $task_id, $user_id);
         $stmt->execute();
@@ -278,7 +299,7 @@ class DbHandler {
         return $num_affected_rows > 0;
     }
 
-    /* ------------- `user_tasks` table method ------------------ */
+    /** ------------- `user_tasks` table method ------------------ */
 
     /**
      * Function to assign a task to user
