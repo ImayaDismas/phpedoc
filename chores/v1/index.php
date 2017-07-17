@@ -78,7 +78,7 @@ $app->post('/register', function() use ($app) {
     validateEmail($email);
 
     $db = new DbHandler();
-    $res = $db->createUser($first_name, $last_name, $email, $password);
+    $res = $db->createProffesional($first_name, $last_name, $email, $password);
 
     if ($res == USER_CREATED_SUCCESSFULLY) {
         $response["error"] = false;
@@ -151,7 +151,7 @@ $app->post('/login', function() use ($app) {
  */
 
 /**
- * Listing all tasks of particual proffesional
+ * Listing all proffesionals
  * method GET
  * url /proffesionals
  */
@@ -166,7 +166,7 @@ $app->get('/proffesionals', 'authenticate', function() {
     $response["error"] = false;
     $response["proffesionals"] = array();
 
-    // looping through result and preparing tasks array
+    // looping through result and preparing proffesionals array
     while ($proffesional = $result->fetch_assoc()) {
         $tmp = array();
         $tmp['proff_id'] = $proffesional['proff_id'];
@@ -195,12 +195,12 @@ $app->get('/proffesionals', 'authenticate', function() {
  * url /proffesional/:id
  * Will return 404 if the proffesional doesn't exist
  */
-$app->get('/proffesional/:id', 'authenticate', function($proff_id) {
+$app->get('/proffesionals/:id', 'authenticate', function($proff_id) {
 //    global $proff_id;
     $response = array();
     $db = new DbHandler();
 
-    // fetch task
+    // fetch proffesional
     $result = $db->getProffesional($proff_id);
 
     if ($result != NULL) {
@@ -228,69 +228,191 @@ $app->get('/proffesional/:id', 'authenticate', function($proff_id) {
 });
 
 /**
- * Creating new task in db
- * method POST
- * params - name
- * url - /tasks/
- */
-$app->post('/tasks', 'authenticate', function() use ($app) {
-    // check for required params
-    verifyRequiredParams(array('task'));
-
-    $response = array();
-    $task = $app->request->post('task');
-
-    global $proff_id;
-    $db = new DbHandler();
-
-    // creating new task
-    $task_id = $db->createTask($proff_id, $task);
-
-    if ($task_id != NULL) {
-        $response["error"] = false;
-        $response["message"] = "Task created successfully";
-        $response["task_id"] = $task_id;
-        echoRespnse(201, $response);
-    } else {
-        $response["error"] = true;
-        $response["message"] = "Failed to create task. Please try again";
-        echoRespnse(200, $response);
-    }
-});
-
-/**
- * Updating existing task
+ * Updating existing proffesional
  * method PUT
- * params task, status
- * url - /tasks/:id
+ * params proff_name, cell_no, national_id, location, image, first_name, last_name, gender
+ * url - /proffesionals/:id
  */
 $app->put('/proffesionals/:id', 'authenticate', function($proff_id) use($app) {
     // check for required params
-    verifyRequiredParams(array('proff_name', 'email', 'cell_no', 'national_id', 'location', 'image', 'first_name', 'last_name'));
+    verifyRequiredParams(array('proff_name', 'cell_no', 'national_id', 'location', 'image', 'first_name', 'last_name', 'gender'));
 
-    global $proff_id;
     $proff_name = $app->request->put('proff_name');
-    $email = $app->request->put('email');
     $cell_no = $app->request->put('cell_no');
     $national_id = $app->request->put('national_id');
     $location = $app->request->put('location');
     $image = $app->request->put('image');
     $first_name = $app->request->put('first_name');
     $last_name = $app->request->put('last_name');
+    $gender = $app->request->put('gender');
 
     $db = new DbHandler();
     $response = array();
 
-    // updating task
-    $result = $db->updateProffesional($proff_id, $proff_name, $email, $cell_no, $national_id, $location, $image, $first_name, $last_name);
+    // updating proffesional details
+    $result = $db->updateProffesional($proff_name, $cell_no, $national_id, $location, $image, $first_name, $last_name, $gender, $proff_id);
     if ($result) {
-        // task updated successfully
+        // personal details updated successfully
         $response["error"] = false;
-        $response["message"] = "Task updated successfully";
+        $response["message"] = "Personal details updated successfully";
     } else {
-        // task failed to update
+        // personal details failed to update
         $response["error"] = true;
-        $response["message"] = "Task failed to update. Please try again!";
+        $response["message"] = "Personal details failed to update. Please try again!";
+    }
+    echoRespnse(200, $response);
+});
+
+/**
+ * Updating existing proffesional
+ * method PUT
+ * params proff_name, cell_no, national_id, location, image, first_name, last_name, gender
+ * url - /proffesionals/:id
+ */
+$app->put('/proffesionals/:id', 'authenticate', function($proff_id) use($app) {
+    // check for required params
+    verifyRequiredParams(array('proff_name', 'cell_no', 'national_id', 'location', 'image', 'first_name', 'last_name', 'gender'));
+
+    $proff_name = $app->request->put('proff_name');
+    $cell_no = $app->request->put('cell_no');
+    $national_id = $app->request->put('national_id');
+    $location = $app->request->put('location');
+    $image = $app->request->put('image');
+    $first_name = $app->request->put('first_name');
+    $last_name = $app->request->put('last_name');
+    $gender = $app->request->put('gender');
+
+    $db = new DbHandler();
+    $response = array();
+
+    // updating proffesional details
+    $result = $db->updateProffesional($proff_name, $cell_no, $national_id, $location, $image, $first_name, $last_name, $gender, $proff_id);
+    if ($result) {
+        // personal details updated successfully
+        $response["error"] = false;
+        $response["message"] = "Personal details updated successfully";
+    } else {
+        // personal details failed to update
+        $response["error"] = true;
+        $response["message"] = "Personal details failed to update. Please try again!";
+    }
+    echoRespnse(200, $response);
+});
+
+/**
+ * Updating existing proffesional
+ * method PUT
+ * params password
+ * url - /change_proffesionals_password/:id
+ */
+$app->put('/change_proffesionals_password/:id', 'authenticate', function($proff_id) use($app) {
+    // check for required params
+    verifyRequiredParams(array('password'));
+
+    $response = array();
+
+    // reading post params
+    $password = $app->request->post('password');
+
+    $db = new DbHandler();
+    $res = $db->changeProffesionalPassword($password, $proff_id);
+
+    if ($res == USER_CREATED_SUCCESSFULLY) {
+        $response["error"] = false;
+        $response["message"] = "Password changed successfully";
+    } else if ($res == USER_CREATE_FAILED) {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while changing password";
+    }
+
+    // echo json response
+    echoRespnse(201, $response);
+});
+
+/**
+ * Updating existing proffesional availability
+ * method PUT
+ * params availability_status
+ * url - /change_proffesionals_availability/:id
+ */
+$app->put('/change_proffesionals_availability/:id', 'authenticate', function($proff_id) use($app) {
+    // check for required params
+    verifyRequiredParams(array('availability_status'));
+
+    $response = array();
+
+    // reading post params
+    $availability_status = $app->request->post('availability_status');
+
+    $db = new DbHandler();
+    $res = $db->changeProffesionalAvailability($availability_status, $proff_id);
+
+    if ($res == USER_CREATED_SUCCESSFULLY) {
+        $response["error"] = false;
+        $response["message"] = "Congratulation, You won the bid";
+    } else if ($res == USER_CREATE_FAILED) {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while confirming your bid";
+    }
+
+    // echo json response
+    echoRespnse(201, $response);
+});
+
+/**
+ * Deactivate existing proffesional
+ * method PUT
+ * params status
+ * url - /deactivate_proffesional/:id
+ */
+$app->put('/deactivate_proffesional/:id', 'authenticate', function($proff_id) use($app) {
+    // check for required params
+    verifyRequiredParams(array('status'));
+
+    $status = $app->request->put('status');
+
+    $db = new DbHandler();
+    $response = array();
+
+    // updating proffesional details
+    $result = $db->deactivate_activateProffesional($status, $proff_id);
+    if ($result) {
+        // personal details updated successfully
+        $response["error"] = false;
+        $response["message"] = "Account deleted successfully";
+    } else {
+        // personal details failed to update
+        $response["error"] = true;
+        $response["message"] = "Account delete failed. Please try again!";
+    }
+    echoRespnse(200, $response);
+});
+
+/**
+ * Activate existing proffesional
+ * method PUT
+ * params status
+ * url - /activate_proffesional/:id
+ */
+$app->put('/activate_proffesional/:id', 'authenticate', function($proff_id) use($app) {
+    // check for required params
+    verifyRequiredParams(array('status'));
+
+    $status = $app->request->put('status');
+
+    $db = new DbHandler();
+    $response = array();
+
+    // updating proffesional details
+    $result = $db->deactivate_activateProffesional($status, $proff_id);
+    if ($result) {
+        // personal details updated successfully
+        $response["error"] = false;
+        $response["message"] = "Account activated successfully";
+    } else {
+        // personal details failed to update
+        $response["error"] = true;
+        $response["message"] = "Account activation failed. Please try again!";
     }
     echoRespnse(200, $response);
 });
@@ -307,13 +429,13 @@ $app->delete('/proffesionals/:id', 'authenticate', function($proff_id) use($app)
     $response = array();
     $result = $db->deleteproffesional($proff_id);
     if ($result) {
-        // task deleted successfully
+        // proffesional deleted successfully
         $response["error"] = false;
-        $response["message"] = "Task deleted succesfully";
+        $response["message"] = "Proffesional account deleted succesfully";
     } else {
-        // task failed to delete
+        // proffesional failed to delete
         $response["error"] = true;
-        $response["message"] = "Task failed to delete. Please try again!";
+        $response["message"] = "Proffesional account failed to delete. Please try again!";
     }
     echoRespnse(200, $response);
 });

@@ -28,9 +28,8 @@ class DbHandler {
      * @param String $email proffesional login email id
      * @param String $password proffesional login password
      */
-    public function createUser($first_name, $last_name, $email, $password) {
+    public function createProffesional($first_name, $last_name, $email, $password) {
         require_once 'PassHash.php';
-        $response = array();
 
         // First check if user already existed in db
         if (!$this->isUserExists($email)) {
@@ -41,7 +40,7 @@ class DbHandler {
             $api_key = $this->generateApiKey();
 
             // insert query
-            $stmt = $this->conn->prepare("INSERT INTO proffesionals(first_name, last_name, email, passwd, api_key, status) values(?, ?, ?, ?, ?, 1)");
+            $stmt = $this->conn->prepare("INSERT INTO proffesionals(first_name, last_name, email, passwd, api_key, status) values(?, ?, ?, ?, ?, 0)");
             $stmt->bind_param("sssss", $first_name, $last_name, $email, $passwd, $api_key);
 
             $result = $stmt->execute();
@@ -60,8 +59,6 @@ class DbHandler {
             // User with same email already existed in the db
             return USER_ALREADY_EXISTED;
         }
-
-        return $response;
     }
 
     /**
@@ -102,6 +99,37 @@ class DbHandler {
 
             // user not existed with the email
             return FALSE;
+        }
+    }
+
+    /**
+     * Change proffesional password
+     * @param String $password proffesional login password
+     */
+    public function changeProffesionalPassword($password, $proff_id) {
+        require_once 'PassHash.php';
+
+        // Generating password hash
+        $passwd = PassHash::hash($password);
+
+        // Generating API key
+        $api_key = $this->generateApiKey();
+
+        // insert query
+        $stmt = $this->conn->prepare("UPDATE proffesionals set passwd = ?, api_key = ? WHERE proff_id = ?");
+        $stmt->bind_param("ssi", $passwd, $api_key, $proff_id);
+
+        $result = $stmt->execute();
+
+        $stmt->close();
+
+        // Check for successful insertion
+        if ($result) {
+            // User successfully inserted
+            return USER_CREATED_SUCCESSFULLY;
+        } else {
+            // Failed to create user
+            return USER_CREATE_FAILED;
         }
     }
 
@@ -194,51 +222,6 @@ class DbHandler {
     /* ------------- `proffesionals` table method ------------------ */
 
     /**
-     * Creating new task
-     * @param String $user_id user id to whom task belongs to
-     * @param String $task task text
-     */
-    public function createTask($user_id, $task) {
-        $stmt = $this->conn->prepare("INSERT INTO tasks(task) VALUES(?)");
-        $stmt->bind_param("s", $task);
-        $result = $stmt->execute();
-        $stmt->close();
-
-        if ($result) {
-            // task row created
-            // now assign the task to user
-            $new_task_id = $this->conn->insert_id;
-            $res = $this->createUserTask($user_id, $new_task_id);
-            if ($res) {
-                // task created successfully
-                return $new_task_id;
-            } else {
-                // task failed to create
-                return NULL;
-            }
-        } else {
-            // task failed to create
-            return NULL;
-        }
-    }
-
-    /**
-     * Fetching single task
-     * @param String $task_id id of the task
-     */
-    public function getTask($task_id, $user_id) {
-        $stmt = $this->conn->prepare("SELECT t.id, t.task, t.status, t.created_at from tasks t, user_tasks ut WHERE t.id = ? AND ut.task_id = t.id AND ut.user_id = ?");
-        $stmt->bind_param("ii", $task_id, $user_id);
-        if ($stmt->execute()) {
-            $task = $stmt->get_result()->fetch_assoc();
-            $stmt->close();
-            return $task;
-        } else {
-            return NULL;
-        }
-    }
-
-    /**
      * Fetching proffessional details
      * @param String $proff_id of the proffesional
      */
@@ -269,7 +252,6 @@ class DbHandler {
      * Updating proffesional
      * @param String $proff_id id of the proffesional
      * @param String proff_name text
-     * @param String $email text
      * @param String $cell_no text
      * @param String $national_id text
      * @param String $location text
@@ -277,9 +259,37 @@ class DbHandler {
      * @param String $first_name text
      * @param String $last_name text
      */
-    public function updateProffesional($proff_id, $proff_name, $email, $cell_no, $national_id, $location, $image, $first_name, $last_name) {
-        $stmt = $this->conn->prepare("UPDATE proffesionals set proff_name = ?, email = ?, cell_no = ?, national_id = ?, location = ?, image = ?, first_name = ?, last_name = ? WHERE proff_id = ?");
-        $stmt->bind_param("siii", $proff_name, $email, $cell_no, $national_id, $location, $image, $first_name, $last_name, $proff_id);
+    public function updateProffesional($proff_name, $cell_no, $national_id, $location, $image, $first_name, $last_name, $gender, $proff_id) {
+        $stmt = $this->conn->prepare("UPDATE proffesionals set proff_name = ?, cell_no = ?, national_id = ?, location = ?, image = ?, first_name = ?, last_name = ?, gender = ? WHERE proff_id = ?");
+        $stmt->bind_param("ssssssssi", $proff_name, $cell_no, $national_id, $location, $image, $first_name, $last_name, $gender, $proff_id);
+        $stmt->execute();
+        $num_affected_rows = $stmt->affected_rows;
+        $stmt->close();
+        return $num_affected_rows > 0;
+    }
+
+    /**
+     * Deactivate proffesional account
+     * @param String $proff_id id of the proffesional
+     * @param String status number
+     */
+    public function deactivate_activateProffesional($status, $proff_id) {
+        $stmt = $this->conn->prepare("UPDATE proffesionals set status = ? WHERE proff_id = ?");
+        $stmt->bind_param("s", $status, $proff_id);
+        $stmt->execute();
+        $num_affected_rows = $stmt->affected_rows;
+        $stmt->close();
+        return $num_affected_rows > 0;
+    }
+
+    /**
+     * Change proffesional availability
+     * @param String $proff_id id of the proffesional
+     * @param String availability_status number
+     */
+    public function changeProffesionalAvailability($availability_status, $proff_id) {
+        $stmt = $this->conn->prepare("UPDATE proffesionals set availability_status = ? WHERE proff_id = ?");
+        $stmt->bind_param("s", $availability_status, $proff_id);
         $stmt->execute();
         $num_affected_rows = $stmt->affected_rows;
         $stmt->close();
@@ -290,9 +300,9 @@ class DbHandler {
      * Deleting a proffesional
      * @param String $proff_id id of the proffesional to delete
      */
-    public function deleteProffesional($user_id, $task_id) {
-        $stmt = $this->conn->prepare("DELETE t FROM tasks t, user_tasks ut WHERE t.id = ? AND ut.task_id = t.id AND ut.user_id = ?");
-        $stmt->bind_param("ii", $task_id, $user_id);
+    public function deleteProffesional($proff_id) {
+        $stmt = $this->conn->prepare("DELETE * FROM proffesionals WHERE proff_id = ?");
+        $stmt->bind_param("i", $proff_id);
         $stmt->execute();
         $num_affected_rows = $stmt->affected_rows;
         $stmt->close();
