@@ -309,10 +309,10 @@ class DbHandler {
         return $num_affected_rows > 0;
     }
 
-    /** ------------- `user_tasks` table method ------------------ */
+    /** ------------- `proffesional_status` table method ------------------ */
 
     /**
-     * Function to assign a task to user
+     * Function to update
      * @param String $user_id id of the user
      * @param String $task_id id of the task
      */

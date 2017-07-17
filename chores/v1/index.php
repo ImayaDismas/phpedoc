@@ -266,42 +266,6 @@ $app->put('/proffesionals/:id', 'authenticate', function($proff_id) use($app) {
 /**
  * Updating existing proffesional
  * method PUT
- * params proff_name, cell_no, national_id, location, image, first_name, last_name, gender
- * url - /proffesionals/:id
- */
-$app->put('/proffesionals/:id', 'authenticate', function($proff_id) use($app) {
-    // check for required params
-    verifyRequiredParams(array('proff_name', 'cell_no', 'national_id', 'location', 'image', 'first_name', 'last_name', 'gender'));
-
-    $proff_name = $app->request->put('proff_name');
-    $cell_no = $app->request->put('cell_no');
-    $national_id = $app->request->put('national_id');
-    $location = $app->request->put('location');
-    $image = $app->request->put('image');
-    $first_name = $app->request->put('first_name');
-    $last_name = $app->request->put('last_name');
-    $gender = $app->request->put('gender');
-
-    $db = new DbHandler();
-    $response = array();
-
-    // updating proffesional details
-    $result = $db->updateProffesional($proff_name, $cell_no, $national_id, $location, $image, $first_name, $last_name, $gender, $proff_id);
-    if ($result) {
-        // personal details updated successfully
-        $response["error"] = false;
-        $response["message"] = "Personal details updated successfully";
-    } else {
-        // personal details failed to update
-        $response["error"] = true;
-        $response["message"] = "Personal details failed to update. Please try again!";
-    }
-    echoRespnse(200, $response);
-});
-
-/**
- * Updating existing proffesional
- * method PUT
  * params password
  * url - /change_proffesionals_password/:id
  */
@@ -415,6 +379,96 @@ $app->put('/activate_proffesional/:id', 'authenticate', function($proff_id) use(
         $response["message"] = "Account activation failed. Please try again!";
     }
     echoRespnse(200, $response);
+});
+
+/**
+ * Updating existing proffesional status
+ * method PUT
+ * params proff_text
+ * url - /profile_text/:id
+ */
+$app->put('/profile_text/:id', 'authenticate', function($proff_id) use($app) {
+    // check for required params
+    verifyRequiredParams(array('proff_text'));
+
+    $response = array();
+
+    // reading post params
+    $proff_text = $app->request->post('proff_text');
+
+    $db = new DbHandler();
+    $res = $db->changeProffesionalTextStatus($proff_text, $proff_id);
+
+    if ($res == USER_CREATED_SUCCESSFULLY) {
+        $response["error"] = false;
+        $response["message"] = "Profile status updated successfully";
+    } else if ($res == USER_CREATE_FAILED) {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while updating profile status";
+    }
+
+    // echo json response
+    echoRespnse(201, $response);
+});
+
+/**
+ * Updating existing proffesional status
+ * method PUT
+ * params proff_image
+ * url - /profile_image/:id
+ */
+$app->put('/profile_image/:id', 'authenticate', function($proff_id) use($app) {
+    // check for required params
+    verifyRequiredParams(array('proff_image'));
+
+    $response = array();
+
+    // reading post params
+    $proff_image = $app->request->post('proff_image');
+
+    $db = new DbHandler();
+    $res = $db->changeProffesionalImageStatus($proff_image, $proff_id);
+
+    if ($res == USER_CREATED_SUCCESSFULLY) {
+        $response["error"] = false;
+        $response["message"] = "Profile status updated successfully";
+    } else if ($res == USER_CREATE_FAILED) {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while updating profile status";
+    }
+
+    // echo json response
+    echoRespnse(201, $response);
+});
+
+/**
+ * Updating existing proffesional status
+ * method PUT
+ * params proff_video
+ * url - /proff_video/:id
+ */
+$app->put('/profile_video/:id', 'authenticate', function($proff_id) use($app) {
+    // check for required params
+    verifyRequiredParams(array('proff_video'));
+
+    $response = array();
+
+    // reading post params
+    $proff_video = $app->request->post('proff_video');
+
+    $db = new DbHandler();
+    $res = $db->changeProffesionalImageStatus($proff_video, $proff_id);
+
+    if ($res == USER_CREATED_SUCCESSFULLY) {
+        $response["error"] = false;
+        $response["message"] = "Profile status updated successfully";
+    } else if ($res == USER_CREATE_FAILED) {
+        $response["error"] = true;
+        $response["message"] = "Oops! An error occurred while updating profile status";
+    }
+
+    // echo json response
+    echoRespnse(201, $response);
 });
 
 /**
