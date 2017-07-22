@@ -275,7 +275,7 @@ class DbHandler {
      */
     public function deactivate_activateProffesional($status, $proff_id) {
         $stmt = $this->conn->prepare("UPDATE proffesionals set status = ? WHERE proff_id = ?");
-        $stmt->bind_param("s", $status, $proff_id);
+        $stmt->bind_param("si", $status, $proff_id);
         $stmt->execute();
         $num_affected_rows = $stmt->affected_rows;
         $stmt->close();
@@ -289,7 +289,7 @@ class DbHandler {
      */
     public function changeProffesionalAvailability($availability_status, $proff_id) {
         $stmt = $this->conn->prepare("UPDATE proffesionals set availability_status = ? WHERE proff_id = ?");
-        $stmt->bind_param("s", $availability_status, $proff_id);
+        $stmt->bind_param("si", $availability_status, $proff_id);
         $stmt->execute();
         $num_affected_rows = $stmt->affected_rows;
         $stmt->close();
@@ -312,16 +312,108 @@ class DbHandler {
     /** ------------- `proffesional_status` table method ------------------ */
 
     /**
-     * Function to update
-     * @param String $user_id id of the user
-     * @param String $task_id id of the task
+     * Creating new proffesional status
+     * @param String $proff_id proffesional proff_id
      */
-    public function createUserTask($user_id, $task_id) {
-        $stmt = $this->conn->prepare("INSERT INTO user_tasks(user_id, task_id) values(?, ?)");
-        $stmt->bind_param("ii", $user_id, $task_id);
-        $result = $stmt->execute();
+    public function createProffesionalStatus($proff_id) {
+
+        // First check if proffesional already existed in db
+        if (!$this->isProffExists($proff_id)) {
+
+            // insert query
+            $stmt = $this->conn->prepare("INSERT INTO proffesional_status(proff_id) values(?)");
+            $stmt->bind_param("i", $proff_id);
+
+            $result = $stmt->execute();
+
+            $stmt->close();
+
+            // Check for successful insertion
+            if ($result) {
+                // Proffesional status successfully inserted
+                return USER_CREATED_SUCCESSFULLY;
+            } else {
+                // Failed to create proffesional status
+                return USER_CREATE_FAILED;
+            }
+        } else {
+            // proffesional status with same $proff_id already existed in the db
+            return USER_ALREADY_EXISTED;
+        }
+    }
+    private function isProffExists($proff_id) {
+        $stmt = $this->conn->prepare("SELECT proff_id from proffesional_status WHERE proff_id = ?");
+        $stmt->bind_param("i", $proff_id);
+        $stmt->execute();
+        $stmt->store_result();
+        $num_rows = $stmt->num_rows;
         $stmt->close();
-        return $result;
+        return $num_rows > 0;
+    }
+
+    /**
+     * Change proffesional text status
+     * @param String $proff_id id of the proffesional status
+     * @param String profile text status
+     */
+    public function changeProffesionalTextStatus($proff_text, $proff_id) {
+        $stmt = $this->conn->prepare("UPDATE proffesional_status set proff_text = ? WHERE proff_id = ?");
+        $stmt->bind_param("si", $proff_text, $proff_id);
+        $stmt->execute();
+        $num_affected_rows = $stmt->affected_rows;
+        $stmt->close();
+        return $num_affected_rows > 0;
+    }
+
+    /**
+     * Change proffesional image status
+     * @param String $proff_id id of the proffesional status
+     * @param String profile image status
+     */
+    public function changeProffesionalImageStatus($proff_image, $proff_id) {
+        $stmt = $this->conn->prepare("UPDATE proffesional_status set proff_image = ? WHERE proff_id = ?");
+        $stmt->bind_param("si", $proff_image, $proff_id);
+        $stmt->execute();
+        $num_affected_rows = $stmt->affected_rows;
+        $stmt->close();
+        return $num_affected_rows > 0;
+    }
+    /**
+     * Change proffesional video status
+     * @param String $proff_id id of the proffesional status
+     * @param String profile video status
+     */
+    public function changeProffesionalVideoStatus($proff_video, $proff_id) {
+        $stmt = $this->conn->prepare("UPDATE proffesional_status set proff_video = ? WHERE proff_id = ?");
+        $stmt->bind_param("si", $proff_video, $proff_id);
+        $stmt->execute();
+        $num_affected_rows = $stmt->affected_rows;
+        $stmt->close();
+        return $num_affected_rows > 0;
+    }
+
+    /**
+     * Creating new proffesional rating
+     * @param String $proff_id proffesional proff_id , rating
+     */
+    public function rateProffesional($client_id, $proff_id, $rating) {
+
+        // insert query
+        $stmt = $this->conn->prepare("INSERT INTO proffessional_rating(client_id, proff_id, rating) values(?,?,?)");
+        $stmt->bind_param("iii", $client_id, $proff_id, $rating);
+
+        $result = $stmt->execute();
+
+        $stmt->close();
+
+        // Check for successful insertion
+        if ($result) {
+            // Proffesional rating successfully inserted
+            return USER_CREATED_SUCCESSFULLY;
+        } else {
+            // Failed to create proffesional rating
+            return USER_CREATE_FAILED;
+        }
     }
 
 }

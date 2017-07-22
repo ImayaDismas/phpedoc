@@ -62,7 +62,7 @@ function authenticate(\Slim\Route $route) {
  * method - POST
  * params - name, email, password
  */
-$app->post('/register', function() use ($app) {
+$app->post('/proffesional_register', function() use ($app) {
     // check for required params
     verifyRequiredParams(array('first_name', 'last_name', 'email', 'password'));
 
@@ -100,7 +100,7 @@ $app->post('/register', function() use ($app) {
  * method - POST
  * params - email, password
  */
-$app->post('/login', function() use ($app) {
+$app->post('/proffesional_login', function() use ($app) {
     // check for required params
     verifyRequiredParams(array('email', 'password'));
 
@@ -115,6 +115,8 @@ $app->post('/login', function() use ($app) {
         // get the user by email
         $proffesional = $db->getUserByEmail($email);
         if ($proffesional != NULL) {
+
+            $proff_id = $proffesional['proff_id'];
 
             $response["error"] = false;
             $response['proff_id'] = $proffesional['proff_id'];
@@ -131,6 +133,8 @@ $app->post('/login', function() use ($app) {
             $response['gender'] = $proffesional['gender'];
             $response['status'] = $proffesional['status'];
             $response['created_at'] = $proffesional['created_at'];
+
+            $db->createProffesionalStatus($proff_id);
         } else {
             // unknown error occurred
             $response['error'] = true;
@@ -327,9 +331,9 @@ $app->put('/change_proffesionals_availability/:id', 'authenticate', function($pr
  * Deactivate existing proffesional
  * method PUT
  * params status
- * url - /deactivate_proffesional/:id
+ * url - /deactivate_proffesionals/:id
  */
-$app->put('/deactivate_proffesional/:id', 'authenticate', function($proff_id) use($app) {
+$app->put('/deactivate_proffesionals/:id', 'authenticate', function($proff_id) use($app) {
     // check for required params
     verifyRequiredParams(array('status'));
 
@@ -356,9 +360,9 @@ $app->put('/deactivate_proffesional/:id', 'authenticate', function($proff_id) us
  * Activate existing proffesional
  * method PUT
  * params status
- * url - /activate_proffesional/:id
+ * url - /activate_proffesionals/:id
  */
-$app->put('/activate_proffesional/:id', 'authenticate', function($proff_id) use($app) {
+$app->put('/activate_proffesionals/:id', 'authenticate', function($proff_id) use($app) {
     // check for required params
     verifyRequiredParams(array('status'));
 
@@ -457,7 +461,7 @@ $app->put('/profile_video/:id', 'authenticate', function($proff_id) use($app) {
     $proff_video = $app->request->post('proff_video');
 
     $db = new DbHandler();
-    $res = $db->changeProffesionalImageStatus($proff_video, $proff_id);
+    $res = $db->changeProffesionalVideoStatus($proff_video, $proff_id);
 
     if ($res == USER_CREATED_SUCCESSFULLY) {
         $response["error"] = false;
@@ -477,7 +481,6 @@ $app->put('/profile_video/:id', 'authenticate', function($proff_id) use($app) {
  * url /proffesionals
  */
 $app->delete('/proffesionals/:id', 'authenticate', function($proff_id) use($app) {
-    global $proff_id;
 
     $db = new DbHandler();
     $response = array();
@@ -490,6 +493,31 @@ $app->delete('/proffesionals/:id', 'authenticate', function($proff_id) use($app)
         // proffesional failed to delete
         $response["error"] = true;
         $response["message"] = "Proffesional account failed to delete. Please try again!";
+    }
+    echoRespnse(200, $response);
+});
+
+/**
+ * Proffesional rating. clients can rate the proffesional after work
+ * method POST
+ * url /proffesional_rating/:id
+ */
+$app->post('/proffesional_rating/:id', 'authenticate', function($proff_id) use($app) {
+
+    $client_id = $app->request->put('client_id');
+    $rating = $app->request->put('rating');
+
+    $db = new DbHandler();
+    $response = array();
+    $result = $db->rateProffesional($client_id, $proff_id, $rating);
+    if ($result) {
+        // proffesional deleted successfully
+        $response["error"] = false;
+        $response["message"] = "Proffesional rating succesfully";
+    } else {
+        // proffesional failed to delete
+        $response["error"] = true;
+        $response["message"] = "Proffesional rating failed. Please try again!";
     }
     echoRespnse(200, $response);
 });
