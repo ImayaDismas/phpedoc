@@ -27,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chores/v1/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8508">
-              <caret line="515" column="65" lean-forward="true" selection-start-line="515" selection-start-column="65" selection-end-line="515" selection-end-column="65" />
+            <state relative-caret-position="213">
+              <caret line="511" column="29" lean-forward="false" selection-start-line="511" selection-start-column="29" selection-end-line="511" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -67,31 +67,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbHandler.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DbHandler.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chores/include/DbHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="398" column="26" lean-forward="false" selection-start-line="398" selection-start-column="26" selection-end-line="398" selection-end-column="26" />
+            <state relative-caret-position="190">
+              <caret line="438" column="20" lean-forward="false" selection-start-line="438" selection-start-column="20" selection-end-line="438" selection-end-column="20" />
               <folding>
-                <marker date="1500741766869" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
-                <marker date="1500741766869" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
-                <marker date="1500741766869" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
-                <marker date="1500741766869" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
-                <marker date="1500741766869" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
-                <marker date="1500741766869" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
-                <marker date="1500741766869" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
-                <marker date="1500741766869" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
-                <marker date="1500741766869" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
-                <marker date="1500741766869" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
-                <marker date="1500741766869" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
-                <marker date="1500741766869" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
-                <marker date="1500741766869" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
-                <marker date="1500741766869" expanded="true" signature="10607:10658" ph="INSERT INTO proffesional_status... " />
-                <marker date="1500741766869" expanded="true" signature="11339:11398" ph="SELECT proff... proffesionals" />
-                <marker date="1500741766869" expanded="true" signature="11870:11934" ph="UPDATE proff... " />
-                <marker date="1500741766869" expanded="true" signature="12416:12481" ph="UPDATE proff... " />
-                <marker date="1500741766869" expanded="true" signature="12963:13028" ph="UPDATE proff... " />
-                <marker date="1500741766869" expanded="true" signature="13489:13564" ph="INSERT INTO proffessional_rating... " />
+                <marker date="1501004049111" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
+                <marker date="1501004049111" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
+                <marker date="1501004049111" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
+                <marker date="1501004049111" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
+                <marker date="1501004049111" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
+                <marker date="1501004049111" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
+                <marker date="1501004049111" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
+                <marker date="1501004049111" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
+                <marker date="1501004049111" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
+                <marker date="1501004049111" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
+                <marker date="1501004049111" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
+                <marker date="1501004049111" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
+                <marker date="1501004049111" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
+                <marker date="1501004049111" expanded="true" signature="10284:10328" ph="DELETE FROM " />
+                <marker date="1501004049111" expanded="true" signature="10950:11001" ph="INSERT INTO proffesional_status... " />
+                <marker date="1501004049111" expanded="true" signature="11682:11741" ph="SELECT proff... proffesionals" />
+                <marker date="1501004049111" expanded="true" signature="12213:12277" ph="UPDATE proff... " />
+                <marker date="1501004049111" expanded="true" signature="13104:13169" ph="UPDATE proff... " />
+                <marker date="1501004049111" expanded="true" signature="13996:14061" ph="UPDATE proff... " />
+                <marker date="1501004049111" expanded="true" signature="14867:14942" ph="INSERT INTO proffessional_rating... " />
+                <marker date="1501004049111" expanded="true" signature="15565:15618" ph="SELECT * FRO... proffessional_rating" />
+                <marker date="1501004049111" expanded="true" signature="16079:16131" ph="SELECT * FRO... proffesional_status" />
               </folding>
             </state>
           </provider>
@@ -135,8 +138,8 @@
         <option value="$PROJECT_DIR$/chores/test.php" />
         <option value="$PROJECT_DIR$/chores/include/DbConnect.php" />
         <option value="$PROJECT_DIR$/chores/include/Config.php" />
-        <option value="$PROJECT_DIR$/chores/v1/index.php" />
         <option value="$PROJECT_DIR$/chores/include/DbHandler.php" />
+        <option value="$PROJECT_DIR$/chores/v1/index.php" />
       </list>
     </option>
   </component>
@@ -275,12 +278,13 @@
       <workItem from="1500199087851" duration="8420000" />
       <workItem from="1500302493898" duration="11083000" />
       <workItem from="1500732520874" duration="169000" />
-      <workItem from="1500732906985" duration="7528000" />
+      <workItem from="1500732906985" duration="7980000" />
+      <workItem from="1500998399551" duration="5541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70684000" />
+    <option name="totallyTimeSpent" value="76677000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -292,8 +296,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
+    <frame x="10" y="27" width="1366" height="741" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -373,25 +376,28 @@
         <state relative-caret-position="5580">
           <caret line="279" column="28" lean-forward="false" selection-start-line="279" selection-start-column="28" selection-end-line="279" selection-end-column="28" />
           <folding>
-            <marker date="1500741766869" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
-            <marker date="1500741766869" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="10607:10658" ph="INSERT INTO proffesional_status... " />
-            <marker date="1500741766869" expanded="true" signature="11339:11398" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="11870:11934" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12416:12481" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12963:13028" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="13489:13564" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
+            <marker date="1501004049111" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="10284:10328" ph="DELETE FROM " />
+            <marker date="1501004049111" expanded="true" signature="10950:11001" ph="INSERT INTO proffesional_status... " />
+            <marker date="1501004049111" expanded="true" signature="11682:11741" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="12213:12277" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13104:13169" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13996:14061" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="14867:14942" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="15565:15618" ph="SELECT * FRO... proffessional_rating" />
+            <marker date="1501004049111" expanded="true" signature="16079:16131" ph="SELECT * FRO... proffesional_status" />
           </folding>
         </state>
       </provider>
@@ -433,25 +439,28 @@
         <state relative-caret-position="2520">
           <caret line="126" column="18" lean-forward="true" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
           <folding>
-            <marker date="1500741766869" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
-            <marker date="1500741766869" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="10607:10658" ph="INSERT INTO proffesional_status... " />
-            <marker date="1500741766869" expanded="true" signature="11339:11398" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="11870:11934" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12416:12481" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12963:13028" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="13489:13564" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
+            <marker date="1501004049111" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="10284:10328" ph="DELETE FROM " />
+            <marker date="1501004049111" expanded="true" signature="10950:11001" ph="INSERT INTO proffesional_status... " />
+            <marker date="1501004049111" expanded="true" signature="11682:11741" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="12213:12277" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13104:13169" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13996:14061" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="14867:14942" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="15565:15618" ph="SELECT * FRO... proffessional_rating" />
+            <marker date="1501004049111" expanded="true" signature="16079:16131" ph="SELECT * FRO... proffesional_status" />
           </folding>
         </state>
       </provider>
@@ -492,25 +501,28 @@
         <state relative-caret-position="300">
           <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding>
-            <marker date="1500741766869" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
-            <marker date="1500741766869" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="10607:10658" ph="INSERT INTO proffesional_status... " />
-            <marker date="1500741766869" expanded="true" signature="11339:11398" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="11870:11934" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12416:12481" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12963:13028" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="13489:13564" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
+            <marker date="1501004049111" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="10284:10328" ph="DELETE FROM " />
+            <marker date="1501004049111" expanded="true" signature="10950:11001" ph="INSERT INTO proffesional_status... " />
+            <marker date="1501004049111" expanded="true" signature="11682:11741" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="12213:12277" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13104:13169" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13996:14061" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="14867:14942" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="15565:15618" ph="SELECT * FRO... proffessional_rating" />
+            <marker date="1501004049111" expanded="true" signature="16079:16131" ph="SELECT * FRO... proffesional_status" />
           </folding>
         </state>
       </provider>
@@ -560,25 +572,28 @@
         <state relative-caret-position="280">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <marker date="1500741766869" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
-            <marker date="1500741766869" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="10607:10658" ph="INSERT INTO proffesional_status... " />
-            <marker date="1500741766869" expanded="true" signature="11339:11398" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="11870:11934" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12416:12481" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12963:13028" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="13489:13564" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
+            <marker date="1501004049111" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="10284:10328" ph="DELETE FROM " />
+            <marker date="1501004049111" expanded="true" signature="10950:11001" ph="INSERT INTO proffesional_status... " />
+            <marker date="1501004049111" expanded="true" signature="11682:11741" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="12213:12277" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13104:13169" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13996:14061" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="14867:14942" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="15565:15618" ph="SELECT * FRO... proffessional_rating" />
+            <marker date="1501004049111" expanded="true" signature="16079:16131" ph="SELECT * FRO... proffesional_status" />
           </folding>
         </state>
       </provider>
@@ -634,25 +649,28 @@
         <state relative-caret-position="280">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <marker date="1500741766869" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
-            <marker date="1500741766869" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="10607:10658" ph="INSERT INTO proffesional_status... " />
-            <marker date="1500741766869" expanded="true" signature="11339:11398" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="11870:11934" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12416:12481" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12963:13028" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="13489:13564" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
+            <marker date="1501004049111" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="10284:10328" ph="DELETE FROM " />
+            <marker date="1501004049111" expanded="true" signature="10950:11001" ph="INSERT INTO proffesional_status... " />
+            <marker date="1501004049111" expanded="true" signature="11682:11741" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="12213:12277" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13104:13169" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13996:14061" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="14867:14942" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="15565:15618" ph="SELECT * FRO... proffessional_rating" />
+            <marker date="1501004049111" expanded="true" signature="16079:16131" ph="SELECT * FRO... proffesional_status" />
           </folding>
         </state>
       </provider>
@@ -686,25 +704,28 @@
         <state relative-caret-position="2268">
           <caret line="126" column="85" lean-forward="false" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="85" />
           <folding>
-            <marker date="1500741766869" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
-            <marker date="1500741766869" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="10607:10658" ph="INSERT INTO proffesional_status... " />
-            <marker date="1500741766869" expanded="true" signature="11339:11398" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="11870:11934" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12416:12481" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12963:13028" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="13489:13564" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
+            <marker date="1501004049111" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="10284:10328" ph="DELETE FROM " />
+            <marker date="1501004049111" expanded="true" signature="10950:11001" ph="INSERT INTO proffesional_status... " />
+            <marker date="1501004049111" expanded="true" signature="11682:11741" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="12213:12277" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13104:13169" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13996:14061" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="14867:14942" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="15565:15618" ph="SELECT * FRO... proffessional_rating" />
+            <marker date="1501004049111" expanded="true" signature="16079:16131" ph="SELECT * FRO... proffesional_status" />
           </folding>
         </state>
       </provider>
@@ -754,25 +775,28 @@
         <state relative-caret-position="2268">
           <caret line="126" column="85" lean-forward="false" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="85" />
           <folding>
-            <marker date="1500741766869" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
-            <marker date="1500741766869" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="10607:10658" ph="INSERT INTO proffesional_status... " />
-            <marker date="1500741766869" expanded="true" signature="11339:11398" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="11870:11934" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12416:12481" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12963:13028" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="13489:13564" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
+            <marker date="1501004049111" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="10284:10328" ph="DELETE FROM " />
+            <marker date="1501004049111" expanded="true" signature="10950:11001" ph="INSERT INTO proffesional_status... " />
+            <marker date="1501004049111" expanded="true" signature="11682:11741" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="12213:12277" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13104:13169" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13996:14061" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="14867:14942" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="15565:15618" ph="SELECT * FRO... proffessional_rating" />
+            <marker date="1501004049111" expanded="true" signature="16079:16131" ph="SELECT * FRO... proffesional_status" />
           </folding>
         </state>
       </provider>
@@ -788,14 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="398" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="513" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chores/include/DbConnect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,39 +838,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chores/include/DbHandler.php">
+    <entry file="file://$PROJECT_DIR$/chores/include/DbConnect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="398" column="26" lean-forward="false" selection-start-line="398" selection-start-column="26" selection-end-line="398" selection-end-column="26" />
-          <folding>
-            <marker date="1500741766869" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
-            <marker date="1500741766869" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="10607:10658" ph="INSERT INTO proffesional_status... " />
-            <marker date="1500741766869" expanded="true" signature="11339:11398" ph="SELECT proff... proffesionals" />
-            <marker date="1500741766869" expanded="true" signature="11870:11934" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12416:12481" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="12963:13028" ph="UPDATE proff... " />
-            <marker date="1500741766869" expanded="true" signature="13489:13564" ph="INSERT INTO proffessional_rating... " />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chores/v1/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8508">
-          <caret line="515" column="65" lean-forward="true" selection-start-line="515" selection-start-column="65" selection-end-line="515" selection-end-column="65" />
+        <state relative-caret-position="213">
+          <caret line="511" column="29" lean-forward="false" selection-start-line="511" selection-start-column="29" selection-end-line="511" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chores/include/DbHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="438" column="20" lean-forward="false" selection-start-line="438" selection-start-column="20" selection-end-line="438" selection-end-column="20" />
+          <folding>
+            <marker date="1501004049111" expanded="true" signature="1230:1335" ph="INSERT INTO proffesionals... " />
+            <marker date="1501004049111" expanded="true" signature="2279:2327" ph="SELECT passw... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="3467:3534" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="4158:4208" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="4594:4783" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5264:5316" ph="SELECT api_k... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="5760:5812" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="6336:6388" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7019:7065" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="7511:7538" ph="SELECT * FRO... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="8210:8366" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="8914:8968" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="9454:9521" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="10284:10328" ph="DELETE FROM " />
+            <marker date="1501004049111" expanded="true" signature="10950:11001" ph="INSERT INTO proffesional_status... " />
+            <marker date="1501004049111" expanded="true" signature="11682:11741" ph="SELECT proff... proffesionals" />
+            <marker date="1501004049111" expanded="true" signature="12213:12277" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13104:13169" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="13996:14061" ph="UPDATE proff... " />
+            <marker date="1501004049111" expanded="true" signature="14867:14942" ph="INSERT INTO proffessional_rating... " />
+            <marker date="1501004049111" expanded="true" signature="15565:15618" ph="SELECT * FRO... proffessional_rating" />
+            <marker date="1501004049111" expanded="true" signature="16079:16131" ph="SELECT * FRO... proffesional_status" />
+          </folding>
         </state>
       </provider>
     </entry>

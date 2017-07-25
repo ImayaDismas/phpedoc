@@ -484,7 +484,7 @@ $app->delete('/proffesionals/:id', 'authenticate', function($proff_id) use($app)
 
     $db = new DbHandler();
     $response = array();
-    $result = $db->deleteproffesional($proff_id);
+    $result = $db->deleteProffesional($proff_id);
     if ($result) {
         // proffesional deleted successfully
         $response["error"] = false;
@@ -520,6 +520,61 @@ $app->post('/proffesional_rating/:id', 'authenticate', function($proff_id) use($
         $response["message"] = "Proffesional rating failed. Please try again!";
     }
     echoRespnse(200, $response);
+});
+
+/**
+ * Listing single proffesional ratings
+ * method GET
+ * url /proffesional_status/:id
+ * Will return 404 if the proffesional rating doesn't exist
+ */
+$app->get('/proffesional_rating/:id', 'authenticate', function($proff_id) {
+//    global $proff_id;
+    $response = array();
+    $db = new DbHandler();
+
+    // fetch proffesional
+    $result = $db->getProffesionalRating($proff_id);
+
+    if ($result != NULL) {
+        $response["error"] = false;
+        $response['client_id'] = $result['client_id'];
+        $response['proff_id'] = $result['proff_id'];
+        $response['rating'] = $result['rating'];
+        echoRespnse(200, $response);
+    } else {
+        $response["error"] = true;
+        $response["message"] = "The requested resource doesn't exists";
+        echoRespnse(404, $response);
+    }
+});
+
+/**
+ * Listing single proffesional status
+ * method GET
+ * url /proffesional_status/:id
+ * Will return 404 if the proffesional status doesn't exist
+ */
+$app->get('/proffesional_status/:id', 'authenticate', function($proff_id) {
+//    global $proff_id;
+    $response = array();
+    $db = new DbHandler();
+
+    // fetch proffesional
+    $result = $db->getProffesionalStatus($proff_id);
+
+    if ($result != NULL) {
+        $response["error"] = false;
+        $response['proff_id'] = $result['proff_id'];
+        $response['proff_text'] = $result['proff_text'];
+        $response['proff_image'] = $result['proff_image'];
+        $response['proff_video'] = $result['proff_video'];
+        echoRespnse(200, $response);
+    } else {
+        $response["error"] = true;
+        $response["message"] = "The requested resource doesn't exists";
+        echoRespnse(404, $response);
+    }
 });
 
 /**

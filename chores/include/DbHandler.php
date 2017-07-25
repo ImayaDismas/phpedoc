@@ -289,11 +289,21 @@ class DbHandler {
      */
     public function changeProffesionalAvailability($availability_status, $proff_id) {
         $stmt = $this->conn->prepare("UPDATE proffesionals set availability_status = ? WHERE proff_id = ?");
-        $stmt->bind_param("si", $availability_status, $proff_id);
-        $stmt->execute();
+        $stmt->bind_param("ii", $availability_status, $proff_id);
+        $result = $stmt->execute();
         $num_affected_rows = $stmt->affected_rows;
         $stmt->close();
-        return $num_affected_rows > 0;
+        if ($num_affected_rows > 0)
+        {
+            // Check for successful insertion
+            if ($result) {
+                // Proffesional status successfully inserted
+                return USER_CREATED_SUCCESSFULLY;
+            } else {
+                // Failed to create proffesional status
+                return USER_CREATE_FAILED;
+            }
+        }
     }
 
     /**
@@ -301,7 +311,7 @@ class DbHandler {
      * @param String $proff_id id of the proffesional to delete
      */
     public function deleteProffesional($proff_id) {
-        $stmt = $this->conn->prepare("DELETE * FROM proffesionals WHERE proff_id = ?");
+        $stmt = $this->conn->prepare("DELETE FROM proffesionals WHERE proff_id = ?");
         $stmt->bind_param("i", $proff_id);
         $stmt->execute();
         $num_affected_rows = $stmt->affected_rows;
@@ -359,10 +369,20 @@ class DbHandler {
     public function changeProffesionalTextStatus($proff_text, $proff_id) {
         $stmt = $this->conn->prepare("UPDATE proffesional_status set proff_text = ? WHERE proff_id = ?");
         $stmt->bind_param("si", $proff_text, $proff_id);
-        $stmt->execute();
+        $result = $stmt->execute();
         $num_affected_rows = $stmt->affected_rows;
         $stmt->close();
-        return $num_affected_rows > 0;
+        if ($num_affected_rows > 0)
+        {
+            // Check for successful insertion
+            if ($result) {
+                // Proffesional status successfully inserted
+                return USER_CREATED_SUCCESSFULLY;
+            } else {
+                // Failed to create proffesional status
+                return USER_CREATE_FAILED;
+            }
+        }
     }
 
     /**
@@ -373,10 +393,20 @@ class DbHandler {
     public function changeProffesionalImageStatus($proff_image, $proff_id) {
         $stmt = $this->conn->prepare("UPDATE proffesional_status set proff_image = ? WHERE proff_id = ?");
         $stmt->bind_param("si", $proff_image, $proff_id);
-        $stmt->execute();
+        $result = $stmt->execute();
         $num_affected_rows = $stmt->affected_rows;
         $stmt->close();
-        return $num_affected_rows > 0;
+        if ($num_affected_rows > 0)
+        {
+            // Check for successful insertion
+            if ($result) {
+                // Proffesional status successfully inserted
+                return USER_CREATED_SUCCESSFULLY;
+            } else {
+                // Failed to create proffesional status
+                return USER_CREATE_FAILED;
+            }
+        }
     }
     /**
      * Change proffesional video status
@@ -386,10 +416,20 @@ class DbHandler {
     public function changeProffesionalVideoStatus($proff_video, $proff_id) {
         $stmt = $this->conn->prepare("UPDATE proffesional_status set proff_video = ? WHERE proff_id = ?");
         $stmt->bind_param("si", $proff_video, $proff_id);
-        $stmt->execute();
+        $result = $stmt->execute();
         $num_affected_rows = $stmt->affected_rows;
         $stmt->close();
-        return $num_affected_rows > 0;
+        if ($num_affected_rows > 0)
+        {
+            // Check for successful insertion
+            if ($result) {
+                // Proffesional status successfully inserted
+                return USER_CREATED_SUCCESSFULLY;
+            } else {
+                // Failed to create proffesional status
+                return USER_CREATE_FAILED;
+            }
+        }
     }
 
     /**
@@ -400,7 +440,7 @@ class DbHandler {
 
         // insert query
         $stmt = $this->conn->prepare("INSERT INTO proffessional_rating(client_id, proff_id, rating) values(?,?,?)");
-        $stmt->bind_param("iii", $client_id, $proff_id, $rating);
+        $stmt->bind_param("sis", $client_id, $proff_id, $rating);
 
         $result = $stmt->execute();
 
@@ -413,6 +453,38 @@ class DbHandler {
         } else {
             // Failed to create proffesional rating
             return USER_CREATE_FAILED;
+        }
+    }
+
+    /**
+     * Fetching proffessional rating
+     * @param String $proff_id of the proffesional
+     */
+    public function getProffesionalRating($proff_id) {
+        $stmt = $this->conn->prepare("SELECT * FROM proffessional_rating WHERE proff_id = ?");
+        $stmt->bind_param("i", $proff_id);
+        if ($stmt->execute()) {
+            $proffesional = $stmt->get_result()->fetch_assoc();
+            $stmt->close();
+            return $proffesional;
+        } else {
+            return NULL;
+        }
+    }
+
+    /**
+     * Fetching proffessional status
+     * @param String $proff_id of the proffesional
+     */
+    public function getProffesionalStatus($proff_id) {
+        $stmt = $this->conn->prepare("SELECT * FROM proffesional_status WHERE proff_id = ?");
+        $stmt->bind_param("i", $proff_id);
+        if ($stmt->execute()) {
+            $proffesional = $stmt->get_result()->fetch_assoc();
+            $stmt->close();
+            return $proffesional;
+        } else {
+            return NULL;
         }
     }
 
